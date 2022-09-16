@@ -33,5 +33,6 @@ module "mynet-eu-vm" {
   instance_name    = "mynet-eu-vm"
   instance_zone    = "europe-west1-d"
   instance_network = google_compute_network.mynetwork.self_link
+  depends_on = module.mynet-us-vm.mynet-us-vm
 }
 
